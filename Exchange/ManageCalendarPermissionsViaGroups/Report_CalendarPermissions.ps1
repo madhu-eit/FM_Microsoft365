@@ -14,5 +14,5 @@ foreach ($Member in $AllMembers)
     Get-MailboxFolderPermission -Identity $($Member.PrimarySmtpAddress + ":\Calendar") `
         | Where-Object {($_.User.DisplayName -ne "Default") -and ($_.User.DisplayName -ne "Anonymous")}
     Write-Host "`n"
-    Write-Host "`n"
+    Write-Host "My Own Line"
 }
